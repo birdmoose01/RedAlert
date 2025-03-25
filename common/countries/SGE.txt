@@ -1,0 +1,87 @@
+capital = 4
+
+oob = SGE_1936
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = SGE_1936_naval_mtg"
+}
+if = {
+	limit = { NOT = { has_dlc = "Man the Guns" } }
+	set_naval_oob = SGE_1936_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob  = SGE_1936_air_bba"
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_air_oob  = SGE_1936_air_legacy"
+}
+
+set_research_slots = 4
+set_stability = 1
+set_war_support = 1
+add_political_power = 0
+set_convoys = 0
+
+add_ideas = {
+	#laws
+	limited_conscription
+	limited_exports
+	civilian_economy
+
+	#other ideas
+
+
+}
+
+set_technology = {
+
+
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+
+
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "Man the Guns" } }
+	set_technology = {
+
+
+	}
+}
+
+SOV = {
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = SGE
+			autonomous_state = integrated_puppet
+		}
+	}
+	else = {
+		puppet = SGE
+	}
+}
+
+set_popularities = {
+	democratic = 9.00
+	communism = 67.00
+	fascism = 2.00
+	neutrality = 22.00
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = ""
+	election_frequency = 48
+	elections_allowed = no
+}
+
